@@ -1,0 +1,22 @@
+// GET USER INFO
+# GET  http://localhost:3000/api/users/me 
+# Content-Type: application/json
+
+// CREATE USER
+# POST http://localhost:3000/api/users/auth/signup
+# Content-Type: application/json
+
+# {
+#     "name":"Omar Enab",
+#     "email":"omar.enab36@gmail.com",
+#     "password":"#Omar123456"
+# }
+
+//LOGIN USER
+# POST http://localhost:3000/api/users/auth/signin
+# Content-Type: application/json
+
+# {
+#     "email":"omar.enab36@gmail.com",
+#     "password":"#Omar123456"
+# }
