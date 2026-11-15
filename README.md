@@ -29,6 +29,7 @@ authentication practices.
     authentication token.
 -   **Bcrypt** --- password hashing.
 -   **NestJS Guards** --- protection of authenticated endpoints.
+-   **Validation Pipe** --- Implementing Validation pipe to sanitize data.
 -   **Class Validator** --- validation of incoming request data.
 -   **Class Transformer** --- transformation of incoming request data.
 -   **Rate limiting** --- limiting repeated requests to reduce
@@ -202,7 +203,7 @@ against the route decorators in your controllers.
                                        authentication    
                                        cookie            
 
-  `GET`             `/users/me`   Retrieve the      Required
+  `GET`             `/users/me`         Retrieve the      Required
                                        authenticated     
                                        user's profile    
   ------------------------------------------------------------------------
