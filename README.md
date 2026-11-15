@@ -233,26 +233,4 @@ cookie/CORS settings allow it.
     and an appropriate CSRF strategy should be configured according to
     the deployment environment.
 
-## Available Scripts
-
-### Frontend
-
-  Command             Description
-  ------------------- --------------------------------------
-  `npm run dev`       Start the Vite development server
-  `npm run build`     Build the frontend for production
-  `npm run preview`   Preview the production build locally
-
-### Backend
-
-  Command                Description
-  ---------------------- ----------------------------------
-  `npm run start:dev`    Start NestJS in development mode
-  `npm run start`        Start the application
-  `npm run build`        Build the backend
-  `npm run start:prod`   Run the production build
-
-Check each application's `package.json` for the exact scripts available
-in your project.
-
 
