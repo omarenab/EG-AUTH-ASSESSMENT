@@ -161,7 +161,7 @@ Create a `.env.development` file in the `backend` directory:
 
 ``` env
 NODE_ENV=development
-PORT=8000
+PORT=3000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_strong_jwt_secret
 ```
@@ -181,8 +181,8 @@ values if needed.
 npm run start:dev
 ```
 
-The backend will run at `http://localhost:8000`, assuming the configured
-port is `8000`.
+The backend will run at `http://localhost:3000`, assuming the configured
+port is `3000`.
 
 ## API Endpoints
 
@@ -202,7 +202,7 @@ against the route decorators in your controllers.
                                        authentication    
                                        cookie            
 
-  `GET`             `/users/profile`   Retrieve the      Required
+  `GET`             `/users/me`   Retrieve the      Required
                                        authenticated     
                                        user's profile    
   ------------------------------------------------------------------------
@@ -211,17 +211,6 @@ The sign-in endpoint sets the authentication cookie. The browser sends
 the cookie on subsequent requests when the frontend and backend
 cookie/CORS settings allow it.
 
-## API Documentation
-
-If Swagger is configured in the backend, start the backend and visit:
-
-``` text
-http://localhost:8000/api-docs
-```
-
-This page provides interactive documentation for exploring and testing
-the API. If Swagger has not been enabled, this URL will not be available
-until it is configured.
 
 ## Security Notes
 
@@ -265,8 +254,4 @@ until it is configured.
 Check each application's `package.json` for the exact scripts available
 in your project.
 
-## Author
 
-**Omar Enab**
-
--   GitHub: [github.com/omarenab](https://github.com/omarenab)
