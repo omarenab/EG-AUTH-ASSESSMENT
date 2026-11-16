@@ -47,7 +47,7 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
       }
     } finally {
       setIsLoading(false);
-      setIsAuthLoading(true)
+      setIsAuthLoading(false)
     }
   };
 
