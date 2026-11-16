@@ -8,7 +8,7 @@ function App() {
   const auth = useContext(AuthContext);
   return (
     <div>
-      {auth?.isAuthLoading && <GlobalLoader />}
+      {auth?.isLoading && <GlobalLoader />}
       <RouterProvider router={router} />;
     </div>
   );

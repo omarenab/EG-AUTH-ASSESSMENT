@@ -26,12 +26,11 @@ const SignupForm = ({ onSuccess }: SignupFormProps) => {
   });
   const auth = useContext(AuthContext);
   if (!auth) return null;
-  const { signup, setIsLoading,setIsAuthLoading } = auth;
+  const { signup,  } = auth;
 
   const onSubmit = async (data: SignUpCredentials) => {
     setServerError("");
-    setIsLoading(true);
-    setIsAuthLoading(true)
+    
     try {
       await signup(data);
       onSuccess();
@@ -44,9 +43,6 @@ const SignupForm = ({ onSuccess }: SignupFormProps) => {
       } else {
         setServerError("Something went wrong. Please try again.");
       }
-    } finally {
-      setIsLoading(false);
-      setIsAuthLoading(false)
     }
   };
 

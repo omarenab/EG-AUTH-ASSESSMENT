@@ -27,12 +27,11 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
   });
   const auth = useContext(AuthContext);
   if (!auth) return null;
-  const { login, setIsLoading,setIsAuthLoading } = auth;
+  const { login } = auth;
 
   const onSubmit = async (data: SignInCredentials) => {
     setServerError("");
-    setIsLoading(true);
-    setIsAuthLoading(true)
+    
     try {
       await login(data);
       onSuccess();
@@ -45,10 +44,7 @@ const LoginForm = ({ onSuccess }: LoginFormProps) => {
       } else {
         setServerError("Something went wrong. Please try again.");
       }
-    } finally {
-      setIsLoading(false);
-      setIsAuthLoading(false)
-    }
+    } 
   };
 
   return (

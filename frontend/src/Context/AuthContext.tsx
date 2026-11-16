@@ -18,7 +18,6 @@ interface AuthProviderProps {
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [isAuthLoading, setIsAuthLoading] = useState(true);
   const isAuthenticated = user !== null;
 
   useEffect(() => {
@@ -32,7 +31,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         setUser(null);
       } finally {
         setIsLoading(false);
-        setIsAuthLoading(false)
       }
     };
 
@@ -51,13 +49,11 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   const logout = async () => {
     setIsLoading(true);
-    setIsAuthLoading(true)
     try {
       await authService.logout();
       setUser(null);
     } finally {
       setIsLoading(false);
-      setIsAuthLoading(false)
     }
   };
 
@@ -69,8 +65,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         login,
         isAuthenticated,
         signup,
-        setIsAuthLoading,
-        isAuthLoading,
         setIsLoading,
         logout,
       }}

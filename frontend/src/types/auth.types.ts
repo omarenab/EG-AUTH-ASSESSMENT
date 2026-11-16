@@ -18,9 +18,7 @@ export interface IAuthContextType {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
-  isAuthLoading: boolean;
   setIsLoading: Dispatch<SetStateAction<boolean>>;
-  setIsAuthLoading: Dispatch<SetStateAction<boolean>>;
   login: (credentials: SignInCredentials) => Promise<void>;
   signup: (credentials: SignUpCredentials) => Promise<void>;
   logout: () => Promise<void>;
