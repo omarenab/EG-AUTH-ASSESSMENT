@@ -13,8 +13,8 @@ export class AuthController {
     response.cookie('access_token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'development' ? false : true,
-      sameSite: 'lax',
-      maxAge: 24 * 60 * 60 * 1000,
+      sameSite: 'none',
+      maxAge:  60 * 60 * 1000,
     });
   }
 
